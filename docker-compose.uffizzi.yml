@@ -1,6 +1,6 @@
 x-uffizzi:
   ingress:                   # required
-    service: site  # the service that should receive https traffic
+    service: siteproxy  # the service that should receive https traffic
     port: 8011      # the port this service listens on
   continuous_previews:
     deploy_preview_when_pull_request_is_opened: true
@@ -12,4 +12,4 @@ services:
       context: .
       dockerfile: Dockerfile
       args:
-        - SERVER_NAME=site.allpass.uffizzi.com # Replace with your domain. This ENV set arg for config.js
+        - SERVER_NAME=siteproxy.allpass.uffizzi.com # Replace with your domain. This ENV set arg for config.js
