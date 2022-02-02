@@ -12,4 +12,4 @@ services:
       context: .
       dockerfile: Dockerfile
       args:
-        - SERVER_NAME=siteproxy.allpass.uffizzi.com # Replace with your domain. This ENV set arg for config.js
+        - SERVER_NAME=deployment-527.allpass.app.uffizzi.com # Replace with your domain. This ENV set arg for config.js
