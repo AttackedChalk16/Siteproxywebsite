@@ -1,0 +1,15 @@
+x-uffizzi:
+  ingress:                   # required
+    service: site  # the service that should receive https traffic
+    port: 8011      # the port this service listens on
+  continuous_previews:
+    deploy_preview_when_pull_request_is_opened: true
+    delete_preview_when_pull_request_is_closed: true
+    share_to_github: true
+services:  
+  siteproxy:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - SERVER_NAME=site.allpass.uffizzi.com # Replace with your domain. This ENV set arg for config.js
