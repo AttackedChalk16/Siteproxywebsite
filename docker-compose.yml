@@ -30,7 +30,7 @@ services:
   siteproxy:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Docker-Dockerfile
       args:
         - SERVER_NAME=site.example.com # Replace with your domain. This ENV set arg for config.js
     environment: 
