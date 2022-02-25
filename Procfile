@@ -1,1 +1,1 @@
-web: herokuAddr=siteallpass.herokuapp.com npm run start
+web: herokuAddr=newallpass.herokuapp.com npm run start
